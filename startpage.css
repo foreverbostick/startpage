@@ -1,0 +1,98 @@
+/* Fade in animation for the search bar */
+@keyframes fadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+/* Slide down animation for the top text */
+@keyframes slideDown {
+    from {top: -300px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+/* Slide up animation for the links at the bottom */
+@keyframes slideUp {
+    from {bottom: -300px; opacity: 0;}
+    to {bottom: 0px; opacity: 1}
+}
+
+html {
+    text-align: center;
+    margin-top: 200px;
+    background: #ffffe3;
+}
+
+p {
+    /* You can download the font I used from https://www.dafont.com/another-day-v2.font */
+    font-family: "Another Day V2";
+    font-size: 4.5em;
+    margin-bottom: 150px;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    position: relative;
+}
+
+form input[type="search"] {
+  border: none;
+  box-sizing: border-box;
+  font-weight: bold;
+  text-align: center;
+  font: "IBM Plex Sans Medium"; /* ttf-ibm-plex in the Arch repos, I'm sure it's available for other distros, too */
+  font-size: 15;
+  background-color: #626262;
+  padding: .5em 1em;
+  margin-bottom: 200px;
+  width: 50%;
+  color: #eeeeee;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  position: relative;
+}
+
+form input::placeholder {
+  color: #eeeeee;
+  opacity: 1;
+}
+
+form:focus-within input::placeholder {
+  opacity: 0;
+}
+
+table {
+    align-content: center;
+    border: solid 1px black;
+    border-radius: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    position: relative;
+}
+
+tr {
+    text-align: center;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "IBM Plex Sans Medium"; /* See the note about the font in the form input section */
+}
+
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d01919;
+    text-decoration: none;
+}
